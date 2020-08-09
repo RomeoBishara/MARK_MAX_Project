@@ -10,6 +10,7 @@ package ca.sheridancollege.blackjack;
  *
  * @author dancye
  * @author Paul Bonenfant Jan 2020
+ * @author Romeo Al Bishara Aug 03, 2020
  */
 public abstract class Player {
 
@@ -20,7 +21,7 @@ public abstract class Player {
      *
      * @param name the unique ID to assign to this player.
      */
-    public Player(String name) {
+    protected Player(String name) {
         this.name = name;
     }
 

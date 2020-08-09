@@ -13,13 +13,14 @@ import java.util.ArrayList;
  *
  * @author dancye
  * @author Paul Bonenfant Jan 2020
+ * @author Romeo Al Bishara
  */
 public abstract class Game {
 
     private final String name;//the title of the game
     private ArrayList<Player> players;// the players of the game
 
-    public Game(String name) {
+    protected Game(String name) {
         this.name = name;
         players = new ArrayList();
     }
@@ -49,7 +50,7 @@ public abstract class Game {
      * Play the game. This might be one method or many method calls depending on your game.
      */
     public abstract void play();
-
+ 
     /**
      * When the game is over, use this method to declare and display a winning player.
      */
