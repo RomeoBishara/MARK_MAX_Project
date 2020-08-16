@@ -12,9 +12,9 @@ public class BlackJackDealer extends Player {
     
     private Hand hand;
     private CardsDeck deck; 
-    
+    private static BlackJackDealer dealer = new BlackJackDealer();
 
-    public BlackJackDealer() {
+    private BlackJackDealer() {
         this("Dealer");
        
     }
@@ -24,11 +24,14 @@ public class BlackJackDealer extends Player {
         hand = new Hand();
     }
 
-   
+   public static BlackJackDealer getDealer() {
+       return dealer;
+   }
 
     public CardsDeck getDeck() {
          deck = new CardsDeck();
         return deck;
+        
     }
 
     public Hand getHand() {
