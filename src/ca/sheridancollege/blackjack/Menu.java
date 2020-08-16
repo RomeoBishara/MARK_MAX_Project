@@ -17,7 +17,6 @@ public enum Menu {
     STAND,
     HIT,
     SPLIT,
-    BET,
-    DOUBLE
- 
+    BET
+   
 }

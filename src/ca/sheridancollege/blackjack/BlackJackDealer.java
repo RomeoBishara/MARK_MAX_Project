@@ -43,10 +43,12 @@ public class BlackJackDealer extends Player {
         
         hand.addCard((PlayingCard)deck.sendCard());
         System.out.println("\nIn the Dealer Hand: \n" + hand);
+        System.out.println("Total in the dealer hand: " + hand.sum());
         
         while (hand.sum() < 17){
             hand.addCard((PlayingCard)deck.sendCard());
             System.out.println("\nIn the Dealer Hand: \n" + hand);
+            System.out.println("Total in the dealer hand: " + hand.sum());
         }
         
     }

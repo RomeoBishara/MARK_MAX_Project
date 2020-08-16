@@ -18,7 +18,7 @@ public class PlayingCard extends Card {
     }
  
      public Value getValue() {
-        return this.value;
+        return this.value;  
     }
 
    
