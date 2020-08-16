@@ -13,13 +13,13 @@ import java.util.ArrayList;
 public class Hand {
 
      
-     private ArrayList<Card> hand;
+     private ArrayList<PlayingCard> hand;
 
     public Hand() {
         this.hand = new ArrayList<>();
     }
      
-    public void addCard(Card card) {
+    public void addCard(PlayingCard card) {
        hand.add(card);
       
     }
@@ -30,20 +30,26 @@ public class Hand {
       * To remove last card and added to new hand in case of split
       * @param card
       */
-    public void removeCard(Card card) {
+    public void removeCard(PlayingCard card) {
         hand.remove(card);
     }
     public void clearHand() {
         hand.clear();
     }
-     private boolean isAce() {
-         boolean result = false;
-            return result;
+     // need to be coded 
+     private boolean isAce(PlayingCard card) {
+        return card.getValue() == Value.ACE; 
         }
      
     public int sum() {
         int sum = 0;
-//        if (card.value == Value.ACE && sum > 21) {
+ for (PlayingCard card : hand) {
+     if (isAce(card) && sum < 21){
+         
+     }
+     sum += card.getValue().getCardValue();
+     
+ }
        
         return sum;
     }
@@ -51,7 +57,7 @@ public class Hand {
     @Override
     public String toString() {
        String onHand = "";
-       for (Card card : hand) {
+       for (PlayingCard card : hand) {
            onHand += card.toString() + "\n";
        }
        return onHand;
