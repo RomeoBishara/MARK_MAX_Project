@@ -12,20 +12,10 @@ public class BlackJackPlayer extends Player {
    private int age;
    private Hand hand;
    
-   public BlackJackPlayer() {
-       this(19, "player");
-        this.hand = new Hand();
-    }
     public BlackJackPlayer(int age, String name) {
         super(name);
         this.age = age;
         this.hand = new Hand();
-      
-        
-    }
-
-    public int getAge() {
-        return age;
     }
 
     public void setAge(int age) {
