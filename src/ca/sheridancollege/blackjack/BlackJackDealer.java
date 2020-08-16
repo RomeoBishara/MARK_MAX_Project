@@ -3,7 +3,7 @@
 package ca.sheridancollege.blackjack;
 
 /**
- *This class....
+ *This class is the dealer class 
  *
  * @author Romeo Al Bishara
  */
@@ -40,6 +40,14 @@ public class BlackJackDealer extends Player {
 
     @Override
     public void play() {
+        
+        hand.addCard((PlayingCard)deck.sendCard());
+        System.out.println("\nIn the Dealer Hand: \n" + hand);
+        
+        while (hand.sum() < 17){
+            hand.addCard((PlayingCard)deck.sendCard());
+            System.out.println("\nIn the Dealer Hand: \n" + hand);
+        }
         
     }
    
