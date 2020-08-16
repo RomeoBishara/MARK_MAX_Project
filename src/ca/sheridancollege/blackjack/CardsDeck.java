@@ -25,9 +25,13 @@ public class CardsDeck {
 
     public CardsDeck() {
         // construct a new deck with 52 cards
-        this.cards = new ArrayList<>();
-     
-        // put some code to add 52 cards 
+           cards = new ArrayList<>();
+        for (Suit suit : Suit.values()) {
+            for (Value value : Value.values()) {
+                Card card = new PlayingCard(value, suit);
+                cards.add(card);
+            }
+        }
         shuffle();
         
     }
